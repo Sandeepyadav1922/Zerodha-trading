@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import AboutPage from "./landing_page/about/AboutPage";
 import HomePage from "./landing_page/home/HomePage";
@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
     
-    <Router>
+    <BrowserRouter>
     <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -29,7 +29,7 @@ function App() {
       <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-    </Router>
+    </BrowserRouter>
     </div>
   );
 }
